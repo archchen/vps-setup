@@ -1,0 +1,7 @@
+server_addr: "ngrok.aoinv.com:8011"
+trust_host_root_certs: false 
+tunnels:
+  ssh:
+    remote_port: 13152 
+    proto:
+      tcp: 22
