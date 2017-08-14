@@ -1,0 +1,11 @@
+[Unit]
+Description=ngrok client
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ngrok -config "/home/pi/.ngrok" -log "/var/log/ngrok.log" start ssh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
