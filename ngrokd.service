@@ -1,0 +1,11 @@
+[Unit]
+Description=ngrok server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ngrokd -domain ngrok.aoinv.com -httpAddr ":7005" -httpsAddr ":7010" -tunnelAddr ":8011" -log "/var/log/ngrokd.log"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
