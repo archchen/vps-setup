@@ -1,0 +1,1 @@
+docker run -d  --name portainer --restart always --network dbnet -e "VIRTUAL_HOST=docker.aoinv.com"  -e "LETSENCRYPT_HOST=docker.aoinv.com"  -e "LETSENCRYPT_EMAIL=arch@aoinv.com.com" -v "/var/run/docker.sock:/var/run/docker.sock" portainer/portainer
